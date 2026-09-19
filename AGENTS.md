@@ -26,8 +26,9 @@ ffmpeg `showspectrum`, waterfall style, dual mirror:
   appear at the picture centre with zero delay.
 - **Frequency mirror**: hstack with `hflip`. The bass line rides the vertical
   centre axis. Combined result is a symmetric diamond.
-- 60 fps, h264 ~8 Mbps (h264_videotoolbox on the Mac), AAC 48 kHz,
-  `-movflags +faststart`.
+- 60 fps, h264 ~8 Mbps (h264_videotoolbox on the Mac), **AAC 320k, 48 kHz,
+  audio delayed 83 ms** (`-af "adelay=83|83"`, picture leads sound by 2/24 s —
+  Thor's animation sync spec, 19 Sep 2026), `-movflags +faststart`.
 
 ### "Vertical centre = audio" (Thor's spec)
 
