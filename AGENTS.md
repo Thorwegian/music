@@ -8,7 +8,11 @@ YouTube channel (@RealThorwegian).
 ffmpeg `showspectrum`, waterfall style, dual mirror:
 
 - **orientation=horizontal** — the spectrum scrolls UP, not sideways
-- **color=cividis** — dark colormap, picked by Thor from sampler grids
+- **Colormap rotation (Thor, 19 Sep 2026):** fire, green, mako — random pick per
+  video, fixed once rendered. `fire`/`green` are presets (`color=fire`,
+  `color=green`); **mako** = `color=intensity` +
+  `lut3d=file=/tmp/mako.cube:interp=trilinear` (33³ cube generated from
+  matplotlib's mako on the Oracle box). Replaces the earlier cividis choice.
 - `scale=log`, `mode=combined`, `legend=0`
 - **Frequency range 0-5512 Hz** (`stop=5512`), quarter of the full band
 - **RGB level curve, darkening direction**, applied to the spectrum only:
